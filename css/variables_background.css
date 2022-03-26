@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+    background-color: hsl(222, 55%, 16%);
+}
+
+body{
+    margin-top: 60px;
+    margin-left: 30px;
+}
+.menu{
+    background-color: hsl(222, 55%, 16%);
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    color: oldlace;
+    box-shadow: 0px 0px 20px 0px black;
+    z-index: 10;
+    height: 40px;
+}
+img{
+    position: fixed;
+    top: 0px;
+    height: 500px;
+    right: 0px;
+    z-index: 1;
+}
+.title{
+    text-align: center;
+    position: relative;
+    margin: 0;
+    width: 100%;
+}
+.variables{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    color: aliceblue;
+    font-size: 1.1rem;
+    font-family: Roboto,sans-serif;
+    background: var(--fondo);
+}
+.definicion{
+    line-height: 2;
+}
+
+/*VARIABLE GLOBAL*/
+
+/*:root*/
+
+:root{
+    --color: rgb(245, 71, 172);
+    --fondo: rgba(255, 0, 0, 0); 
+}
+
+span{
+    color: var(--color);
+    background: var(--fondo);
+}
+
+pre,ul,li,p{
+    background: var(--fondo);
+}
+
+h3{
+    margin: 0;
+    box-shadow: 0px 0px 20px 0px black;
+    width: 500px;
+    text-align: center;
+}
+li{
+    list-style: none;
+}
+li::before{
+    content: "⍟ ";
+}
+
+/*background*/
+[class^="bg-"]{
+    display: inline-block;
+    width: 30%;
+    height: 200px;
+    position:relative;
+    z-index: 3;
+    border:  1px solid red;
+    margin: 5px;
+}
+.text{
+    position:absolute;
+    margin: 0px;
+    width: 100%;
+    line-height: 200px;
+    text-align: center;
+    background-color: rgba(238, 230, 230, 0);
+    font-size: 1.5rem;
+    color: rgb(196, 194, 218);
+}
+.bg-color{
+    background-color: rgb(71, 121, 216);
+}
+
+.bg-size{
+    background-image: url(/Logo/memoria_tecnologias-inicio.png);
+    background-size: contain;
+}
+.bg-imagen{
+    background-image: url(/Logo/image.png);
+}
+.bg-repeat{
+    background-image: url(/Logo/minions-clipart-3-1024x1024.png);
+    background-size: 30%;
+    background-repeat: repeat-Y;
+}
+
+.bg-position{
+    background-image: url(/Logo/minions-clipart-3-1024x1024.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+/*la imagen se empiza a visualizar desde la posicion indicada*/
+.bg-clip{
+    background-clip:content-box;
+    background-image: url(/Logo/dainerys.jpg);
+    padding: 25px;
+    background-size: contain;
+    background-repeat:repeat;
+}
+/*la imagen se recorta */
+.bg-origin{
+    background-origin: content-box;
+    background-image: url(/Logo/dainerys.jpg);
+    padding: 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bg-attachment{
+    background-image: url(/Logo/daynerys.jpeg);
+    background-size: 250px;
+    background-attachment: fixed;
+}
+/*mas de un fondo*/
+
+.bg-multiple{
+    background-image: 
+    url(/Logo/pngwing.com.png),
+    url(/Logo/pngwing.co.png),
+    url(/Logo/daynerys.jpeg);
+    background-size:50%,30%,cover;
+    background-repeat: no-repeat,repeat-x,no-repeat;
+    background-position: top right,bottom,center;
+}

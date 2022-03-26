@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSITION</title>
+    <link rel="stylesheet" href="/css/normalize-dist.css"/>
+    <link rel="stylesheet" href="/css/position.css"/>
+</head>
+<body>
+    <h1 class="title">Position</h1>
+    <p class="contexto">La propiedad nos permite posicionar los elementos.<br>
+        Al posicionar un elemento se habilitaran 4 propiedades que podemos utilizar para mover los elementos en los 3 ejes.
+        <br><br>
+        top -> El elemento se movera desde la parte <u>superior</u> a la distancia que le hayamor indicado.
+        <br><br>
+        right -> El elemento se movera desde la parte <u>derecha</u> a la distancia que le hayamor indicado.
+        <br><br>
+        bottom -> El elemento se movera desde la parte <u>inferior</u> a la distancia que le hayamor indicado.
+        <br><br>
+        left -> El elemento se movera desde la parte <u>izquierda</u> a la distancia que le hayamor indicado.
+        <br><br>
+        z-index -> Nos permite mover el elemento en el contexto de apilamiento (eje z)
+        <br><br>
+        NOTA: Si a un elemento le declaramos la propiedad top y/o left, - bottom y/o right no funciona.
+</p>
+    
+         <img src="/Logo/minions-clipart-3-1024x1024.png" alt="AQUI VA UNA IMAGEN">
+    
+    <ul>
+        <li>Position Relative</li>
+        <p>
+            El elemento mantendra la posicion y medidas en el flujo de renderizado <br>
+            y mantendra su espacio reservado.<br>
+            Si lo movemos lo hara usando su pocicion en el html como punto de referencia.
+ 
+        </p>
+        <li>Position Absolute</li>
+        <p>
+            El elemento perdera sus medidas y su espacio reservado.<br>Si lo movemos usara el elemento
+            posicionado contenedor como referencia.<br> Si no tiene, usara el elemento html de referencia.
+        </p>
+        <div class="contenedor-box">
+            <div class="box box-1">box 1</div>
+            <div class="box box-2">box 2</div>
+        </div>
+        <li>Position Fixed</li>
+        <p>El elemento perdera sus medidas y su espacio reservado.<br>
+        Si lo movemos usara el elemento html como referencia,<br>
+    y ademas se quedara fijo en esa posicion aunque hagamos scroll.
+    <br>
+    <br>
+    Ejemplo en este html el titulo siempre sera visible</p>
+        <li>Position Sticky</li>
+        <p>ES una mezcla de position Relative y "fixed". Con este tipo de posicionamiento los valores<br>
+        top, left, bottom y right no sirven para mover el elemento, si no para indicarle en que punto <br>
+        pasara a tener un comportamiento de posicionamiento similar a fixed, hasta llegar a ese punto <br>
+        se comportara como si no tuviera posicionamiento, aunque si contara como posicionado <br>
+        si necesitariamos colocar otro elemento respecto a el (absolute).   
+        <br>
+        <br>
+        Ejemplo cada item estara fijo en su contenedor  
+    </p>
+        <li>z-index</li>
+        <p>Es la propiedad que nos permite ordenar los elementos superpuestos <br> para controlar cual se coloca por delante y cual por detras.</p>
+    
+        <div class="box box-3">box 1</div>
+        <div class="box box-4">box 2</div>
+        <div class="box box-5">box 3</div>
+
+    </ul>
+</body>
+</html>

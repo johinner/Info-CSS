@@ -1,0 +1,110 @@
+li{
+    text-decoration: none;
+}
+ul > li{
+    list-style: none;
+}
+ul > li::before{
+    color: fuchsia;
+    content: "➢  ";
+}
+
+span{
+    color: rgb(255, 255, 255);
+}
+.clase{
+    text-decoration: overline;
+}
+.button{
+    text-decoration: none;
+    display: inline-block;
+    background-color: rgba(28, 40, 218, 0.753);
+    padding: .5em;
+    margin-top: 12px ;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 5px 5px 10px black;
+}
+input{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    
+}
+
+/*:active*/
+
+.button:active{
+    transform: scale(.8);
+}
+
+/*:hover*/
+
+.button_2:hover{
+    background-color: red;
+}
+/*:focus*/
+
+.input_1:focus{
+    background-color: rgba(28, 41, 218, 0.431);
+}
+
+/*:target*/
+/*ejemplo*/
+.frases{
+margin-top: 800px;
+margin-bottom: 1000px;
+}
+.frases:target{
+    padding-top: 75px;
+}
+
+/*:enabled*/
+.enabled{
+    background-color: aqua;
+} 
+
+/*disable*/
+
+/*:checked*/
+.checked:checked + label{
+    font-size: 2em;
+    color: aqua;
+}
+
+/*:in-range   y :out-of-range*/ 
+.range:in-range{
+    background-color: rgba(0, 255, 0,0.25);
+    color: black;
+}
+.range:out-of-range{
+    background-color: rgba(255,0,0,0.25);
+    border: 2px solid red;
+}
+
+.range:in-range + label::after{
+    content:" en el rando.";
+}
+.range:out-of-range + label::after{
+    content: " ¡fuera de rango!";
+}
+/*:required*/
+.valid:required:invalid {
+    border-color: #800000;
+    border-width: 4px;
+   background-color:  #ffdddd;
+   color: black;
+  }
+
+  .valid:valid{
+    background-color: #ddffdd;
+    color: black;
+  }
+
+  .valid:valid + label::after{
+      content: "correo valido";
+  }
+  .valid:invalid + label::after{
+      content: "Ingrese un correo valido";
+  }
+

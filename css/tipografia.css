@@ -1,0 +1,73 @@
+
+.null{
+    width: 100%;
+    text-align: left;
+    background: var(--fondo);
+    box-shadow: none;
+}
+
+/*personalizar item lista*/
+
+/* .list_item::before{
+    content: "";
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url(/Logo/flecha.png);
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 1em;
+} */
+.list{
+    list-style-type: none;
+}
+
+.list_item{
+    background-image: url(/Logo/flecha.png);
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 2em;
+    margin-top: 8px;
+}
+
+.list_item::before{
+    content: "";
+}
+
+/*tablas*/
+table{
+    background: var(--fondo);
+    margin: 20px;
+    table-layout: fixed;
+    width:600px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.table{
+    border-spacing: 20px;
+    empty-cells: hide;
+}
+.table_data{
+    background-color: rgba(43, 226, 128, 0.972);
+    color: black;
+}
+
+.table_container{
+    overflow-x: auto;
+    background: var(--fondo);
+
+}
+
+ .img{
+    position: relative;
+    max-width: 100%;
+    
+} 
+
+.img_contain{
+    display:flex;
+    align-items: center;
+}

@@ -1,0 +1,58 @@
+*{
+    background-color: rgb(46, 45, 45);
+    color: antiquewhite;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-top: 5rem;
+    font-family: sans-serif;
+}
+
+li{
+    text-decoration: underline;
+    font-size: 22px;
+    color: burlywood;
+}
+
+.menu,.title{
+    position: fixed;
+    margin-top: 0pt;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    background-color: #0606b1;
+    text-align: center;
+}
+
+/*::first-letter*/
+
+.letter::first-letter{
+    color: red;
+    font-size: 1.8rem;
+}
+
+/*::first-line*/
+
+.line::first-line{
+    color: rgb(105, 221, 183);
+    text-shadow: 5px 3px 5px black;
+    font-size: 1.5rem;
+}
+
+/*::selection*/
+*::selection{
+    color:rgb(83, 7, 206);
+    background-color: rgb(64, 249, 255);
+}    
+
+/*::before*/
+.before::before{
+    content: "🔜";
+}
+/*::after*/
+.after::after{
+    content: "🔙";
+}
