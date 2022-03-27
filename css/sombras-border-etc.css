@@ -4,10 +4,16 @@
     
 }
 
+ul > li::before{
+    color: fuchsia;
+    content: "➢  ";
+}
+
 p,li{
     margin-left: 5%;
 }
 h3{
+    margin: 20px;
     text-align: center;
     background-color: aqua;
     font-size: 1.5em;
@@ -29,6 +35,7 @@ h3{
 .img2{
     max-width: 100%;
     filter:blur(5px);
+
 }
 .img2:hover{
     filter: none;

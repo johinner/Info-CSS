@@ -13,19 +13,6 @@ left: 0px;
 top: 0px;
 }
 
-.header{
-    font-weight: 700;
-    color: aliceblue;
-    font-family:monospace;
-    font-size:20px;
-    text-align: center;
-    position: fixed;
-    padding: 20px 0;
-    background-color: rgb(35, 84, 190);
-    top: 0;
-    width: 100%;
-    box-shadow: inset 0px 0px 30px 1px black;
-}
 body{
     padding-top: 70px;
     background-color: aquamarine;
