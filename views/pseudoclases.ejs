@@ -1,0 +1,116 @@
+<%- include('template/cabecera',{titleWeb: title})%>
+
+    <link rel="stylesheet" href="/css/pseudoelmento.css"/>
+    <link rel="stylesheet" href="/css/pseudoclases.css"/>
+   
+</head>
+<body>
+    <%- include('template/navbar')%>
+
+    <div class="menus"><h1 class="title">Pseudoclases</h1></div>  
+    <P>Son selectores que reaccionan en tiempo real detectando la interaccion del usuario con algunos elementos<br>
+    Funcionan con todos los selectores de css<br>
+    No estan atados a ningun elemento</P>
+    <ol>
+        <li>Dynamic
+            <ul><br>
+            <li>:link - <span class="span">Link no visitado</span> </li>
+            <br>
+            <li>:visited - <span>Link visitado</span></li>
+            <br>
+            <li>:active(link) - <span>En el momento del click</span></li>
+            <a href="#" class="button button_1">OK</a>
+            <br>
+            <li>:hover - <span>Al poner el maus sobre el foco</span></li>
+            <a href="#" class="button button_2">OK</a>
+            <br>
+            <li>:focus - <span>Cuando el elementos tiene el foco</span></li>
+                <input class="input_1" placeholder="Selecione el recuadro">
+            <br>
+            <li>:target - <span>Elemento que es objetivo de un marcador o ancha</span></li>
+                <a href="#frase">Ir a frase Motivadora</a>
+            <br>
+            <br>
+            <li>:lang() - <span>Modifica el elemento que contiene el atributo lang<br>
+                  Es una funcion que nececita un parametro.</q></span></li>
+    
+            </ul>
+        </li>
+        <br>
+        <li>UI States</li>
+        <br>
+        <ul>
+            <li>:enabled</li>
+            <p>Representa cualquier elemento habilitado. Un elemento está habilitado si puede ser activado (es decir seleccionado, se puede hacer click en él, acepta que se le introduzca texto, etc.)</p>
+            <input class="input enabled" type="text">
+            <br>
+            <li>:disabled</li>
+            <p>Representa a cualquier elemento deshabilitado.</p>
+            <input class="input disabled" type="text" disabled>
+            <br>
+            <li>:checked</li>
+            <P>El usuario puede activar este estado marcando/seleccionando un elemento, o desactivándolo desmarcando/deseleccionando el elemento.</P>
+            <input id="checkbox" class="input checked" type="checkbox">
+            <label for="checkbox" class="label_checkes">click</label>
+            <br>
+            <li>:in-range</li><li>:out-of-range</li>
+            <P>Representa un elemento < input > cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos min y max.
+            <br><br>
+            Esta pseudo-clase es útil para dar al usuario una indicación visual de que el valor actual de un campo está dentro de los límites permitidos.</P>
+            <label>Los valores entre 1 y 10</label>
+            <br>
+            <input id="value1" name="value1" class="input range" type="number" min="1" max="10" value="12">
+            <label for="value1">Tu valor esta</label>
+            <br>
+            <br>
+            <li>:optional</li>
+            <p>Representa cualquier elemento < input>, < select>, o < textarea> que no tenga el atributo required establecido en él.</p>
+            <li>:required</li>
+            <p>Representa cualquier elemento < input>, < select>, o < textarea> que tenga el atributo required establecido en él.</p>
+            <li>:valid</li><li>:invalid</li>
+            <p>Representa cualquier elemento < input> u otro elemento < form> cuyo contenido se valide (en-US) satisfactoriamente. Esto permite que los campos válidos adopten fácilmente una apariencia que ayuda al usuario a confirmar que sus datos están formateados correctamente.</p>
+            <label for="email_input">Ingrese una direccion de correo</label><br>
+            <input type="email" id="email_input" class="input valid" required>
+            <label></label>
+        </ul><br>
+        <li>Structural</li>
+        <ul><br>
+            <li>:root</li>
+            <p>Representa la raiz del documento (html) usando una pseudoclase tenemos mas especificidad que si usaramos html</p>
+            <li>:empty</li>
+            <p>Esta pseudoclase se aplica para los elementos vacios, es decir, etiquetas que no tienen contenido</p>
+            <li>-child</li>
+            <br>
+            <ul>
+                <li>:first-child</li>
+                <P>Selecciona al primer hijo (independientemente del tipo de etiqueta)</P>
+                <li>:nth-child(n)</li>
+                <p>Seleciona al hijo n</p>
+                <li>:nth-last-child(n)</li>
+                <p>Seleciona al hijo n empezando desde el ultimo</p>
+                <p>Valores Posibles:<br><br>odd - Impares<br>even - Pares<br>numeros enteros - 1,2,3...<br>equaciones - (1n,3n,4n+1,n+4,...a)<br>n es un multiplicador va de 0 hasta que se quede sin elementos</p>
+                <li>:only-child</li>
+                <P>Seleciona al hijo unico (Independiente del tipo de etiqueta)</P>
+            </ul>
+            <li>-type</li>
+            <br>
+            <ul>
+                <li>:first-of-type</li>
+                <li>:last-of-type</li>
+                <li>:nth-of-type()</li>
+                <li>:nth-last-of-type()</li>
+                <li>:only-of-type</li>
+                <p>seleciona al hijo Dependiendo de la etiqueta</p>
+            </ul>
+        </ul>
+        <li>Negation</li><br>
+        <ul>
+            <li>:not()</li>
+            <li>:not</li>
+            <p>Seleciona al elemento que no cumpla la condicion, se pude poner cualquier selector salvo otro :not</p>
+        </ul>
+    </ol>
+    <p id="frase" class="frases">CON GANAS SE SUEÑA, CON VALENTÍA SE LOGRA.<br>
+        Para lograr nuestros sueños debemos ser valientes, y en muchas ocasiones implica arriesgarse y salir de nuestra zona de confort.</p>
+</body>
+</html>
